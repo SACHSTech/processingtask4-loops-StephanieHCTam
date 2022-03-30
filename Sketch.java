@@ -16,20 +16,28 @@ public class Sketch extends PApplet {
    * values here i.e background, stroke, fill etc.
    */
   public void setup() {
-    background(210, 255, 173);
+    background(255, 255, 255);
   }
 
   /**
    * Called repeatedly, anything drawn to the screen goes here
    */
   public void draw() {
-	  
-	// sample code, delete this stuff
-    stroke(128);
-    line(150, 25, 270, 350);  
 
-    stroke(255);
-    line(50, 125, 70, 50);  
+    // Quadrant 1 is a 10 x 10 grid that scales to with the size* of window 
+    stroke(0);
+    
+    for (int intLineX = width/20; intLineX <= width/2; intLineX += width/20) {
+      line(intLineX, 0, intLineX, height/2);
+    }
+
+    for(int intLineY = height/20; intLineY <= height/2; intLineY += height/20) {
+      line(0, intLineY, width/2, intLineY);
+    }
+    
+
+
+
   }
   
   // define other methods down here.
