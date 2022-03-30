@@ -21,34 +21,34 @@ public class Sketch extends PApplet {
     // Quadrant 1: 10 x 10 grid that scales to with the size* of window 
     stroke(0);
     
-    for (int lineX = (width/20); lineX <= (width/2); lineX += (width/20)){
-      line(lineX, 0, lineX, (height/2));
+    for (int intLineX = (width/20); intLineX <= (width/2); intLineX += (width/20)){
+      line(intLineX, 0, intLineX, (height/2));
     }
 
-    for(int lineY = height/20; lineY <= height/2; lineY += height/20){
-      line(0, lineY, width/2, lineY);
+    for(int intLineY = height/20; intLineY <= height/2; intLineY += height/20){
+      line(0, intLineY, width/2, intLineY);
     }
 
     // Quadrant 2: 5 x grid of evenly spaced circles that scales to the size* of the window.
     stroke(0);
     fill(190, 52, 125);
 
-    for (int circleY = (height/20); circleY <= (height/2); circleY += (height/10)){
-      for (int circleX = (width/2) + (width/20); circleX <= width; circleX += (width/10)){
-        ellipse(circleX, circleY, (width/20), (height/20));
+    for (int intCircleY = (height/20); intCircleY <= (height/2); intCircleY += (height/10)){
+      for (int intCircleX = (width/2) + (width/20); intCircleX <= width; intCircleX += (width/10)){
+        ellipse(intCircleX, intCircleY, (width/20), (height/20));
       }
     }
     
     // Quadrant 3: horizontal grayscale gradient
-    for (int lineGrayScale = 0; lineGrayScale < (width/2); lineGrayScale++){
-      stroke (lineGrayScale, lineGrayScale, lineGrayScale);
-      line(lineGrayScale, (height/2), lineGrayScale, height);
+    for (int intLineGrayScale = 0; intLineGrayScale < (width/2); intLineGrayScale++){
+      stroke (intLineGrayScale, intLineGrayScale, intLineGrayScale);
+      line(intLineGrayScale, (height/2), intLineGrayScale, height);
     }
 
     // Quadrant 4: 8 petal flower with a loop to draw the petals evenly.
     translate(300, 300);
     
-    for (int petalCount = 0; petalCount <= 8; petalCount++){
+    for (int intPetalCount = 0; intPetalCount <= 8; intPetalCount++){
       fill(225, 115, 40);
       stroke(0);
       rotate(PI/4);
