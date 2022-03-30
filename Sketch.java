@@ -1,20 +1,17 @@
 import processing.core.PApplet;
 
 public class Sketch extends PApplet {
-	
-	
+
   /**
-   * Called once at the beginning of execution, put your size all in this method
-   */
+  * Program Sketch.java draws sequences of objects. 
+  * @author: Stephanie Tam
+  */
+	
   public void settings() {
 	// put your size call here
     size(400, 400);
   }
 
-  /** 
-   * Called once at the beginning of execution.  Add initial set up
-   * values here i.e background, stroke, fill etc.
-   */
   public void setup() {
     background(255, 255, 255);
   }
@@ -22,23 +19,31 @@ public class Sketch extends PApplet {
   /**
    * Called repeatedly, anything drawn to the screen goes here
    */
+  
   public void draw() {
 
-    // Quadrant 1 is a 10 x 10 grid that scales to with the size* of window 
+    // Quadrant 1: 10 x 10 grid that scales to with the size* of window 
     stroke(0);
     
-    for (int intLineX = width/20; intLineX <= width/2; intLineX += width/20) {
-      line(intLineX, 0, intLineX, height/2);
+    for (int lineX = width/20; lineX <= width/2; lineX += width/20){
+      line(lineX, 0, lineX, height/2);
     }
 
-    for(int intLineY = height/20; intLineY <= height/2; intLineY += height/20) {
-      line(0, intLineY, width/2, intLineY);
+    for(int lineY = height/20; lineY <= height/2; lineY += height/20){
+      line(0, lineY, width/2, lineY);
+    }
+
+    // Quadrant 2: 5 x grid of evenly spaced circles that scales to the size* of the window.
+    stroke(0);
+    fill(190, 52, 125);
+
+    for (int circleY = (height/20); circleY <= (height/2); circleY += (height/10)){
+      for (int circleX = (width/2) + (width/20); circleX <= width; circleX += (width/10)){
+        ellipse(circleX, circleY, (width/20), (height/20));
+      }
     }
     
-
-
+    
 
   }
-  
-  // define other methods down here.
 }
