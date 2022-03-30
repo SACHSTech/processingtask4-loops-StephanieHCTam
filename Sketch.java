@@ -49,7 +49,18 @@ public class Sketch extends PApplet {
       line(lineGrayScale, height/2, lineGrayScale, height);
     }
 
+    // Quadrant 4: 8 petal flower with a loop to draw the petals evenly.
+    translate(300, 300);
     
-
+    for (int petalCount = 0; petalCount <= 8; petalCount++){
+      fill(225, 115, 40);
+      stroke(0);
+      rotate(PI/4);
+      ellipse(0, (float)(height * 0.075), (float)(width * 0.05), (float)(height * 0.2));
+    }
+    // Flower middle
+    stroke(0);
+    fill(30, 100, 30); 
+    ellipse( (float) (width * 0), (float) (height * 0), (float) (width * 0.125), (float) (height * 0.125)); 
   }
 }
