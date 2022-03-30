@@ -3,7 +3,7 @@ import processing.core.PApplet;
 public class Sketch extends PApplet {
 
   /**
-  * Program Sketch.java draws sequences of objects.. 
+  * Program Sketch.java draws sequences of objects. 
   * @author: Stephanie Tam
   */
 	
@@ -15,18 +15,14 @@ public class Sketch extends PApplet {
   public void setup() {
     background(255, 255, 255);
   }
-
-  /**
-   * Called repeatedly, anything drawn to the screen goes here
-   */
   
   public void draw() {
 
     // Quadrant 1: 10 x 10 grid that scales to with the size* of window 
     stroke(0);
     
-    for (int lineX = width/20; lineX <= width/2; lineX += width/20){
-      line(lineX, 0, lineX, height/2);
+    for (int lineX = (width/20); lineX <= (width/2); lineX += (width/20)){
+      line(lineX, 0, lineX, (height/2));
     }
 
     for(int lineY = height/20; lineY <= height/2; lineY += height/20){
@@ -46,7 +42,7 @@ public class Sketch extends PApplet {
     // Quadrant 3: horizontal grayscale gradient
     for (int lineGrayScale = 0; lineGrayScale < (width/2); lineGrayScale++){
       stroke (lineGrayScale, lineGrayScale, lineGrayScale);
-      line(lineGrayScale, height/2, lineGrayScale, height);
+      line(lineGrayScale, (height/2), lineGrayScale, height);
     }
 
     // Quadrant 4: 8 petal flower with a loop to draw the petals evenly.
