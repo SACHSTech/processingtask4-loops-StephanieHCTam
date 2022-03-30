@@ -3,7 +3,7 @@ import processing.core.PApplet;
 public class Sketch extends PApplet {
 
   /**
-  * Program Sketch.java draws sequences of objects. 
+  * Program Sketch.java draws sequences of objects.. 
   * @author: Stephanie Tam
   */
 	
@@ -43,6 +43,12 @@ public class Sketch extends PApplet {
       }
     }
     
+    // Quadrant 3: horizontal grayscale gradient
+    for (int lineGrayScale = 0; lineGrayScale < (width/2); lineGrayScale++){
+      stroke (lineGrayScale, lineGrayScale, lineGrayScale);
+      line(lineGrayScale, height/2, lineGrayScale, height);
+    }
+
     
 
   }
